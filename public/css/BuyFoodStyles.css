@@ -1,0 +1,184 @@
+*{
+    padding: 0;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(/images/bg.png);
+    background-size: cover;
+    background-repeat: no;
+    /* background-attachment: fixed; */
+}
+
+
+header{
+    background-color: rgba(255, 72, 0, 0.342);
+    background-size: 100%;
+    color: black;
+    padding: 20px;
+    grid-column: 1/-1;
+    text-align: center;
+}
+
+header .shopping{
+    position: relative;
+    text-align: right;
+}
+
+header .shopping img{
+    position: absolute;
+    top: -45px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+}
+
+header .shopping img:hover{
+    position: absolute;
+    top: -55px;
+    right: 0px;
+    width: 70px;
+    height: 70px;
+}
+
+header .shopping span{
+    background: black;
+    border-radius: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    top: -47px;
+    left: 96%;
+    padding: 3px 10px;
+}
+
+.list{
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 30px;
+    margin-top: 50px;
+}
+.list .item{
+    text-align: center;
+    padding: 0px;
+    box-shadow: 20px;
+    background-color: #FFDEAD;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.list .item{
+    width: 420px;
+    height: 500px;
+    border-radius: 15px 15px;
+}
+
+.list .item img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+
+}
+.list .item .title{
+    font-weight: 600;
+    text-align: left;
+    margin: 10px;
+}
+.list .item .price{
+    text-align: right;
+    margin-top: -30px;
+    margin-right: 10px;
+}
+.list .item button{
+    margin-top: 40px;
+    background-color: orangered;
+    border: none;
+    color: #fff;
+    width: 180px;
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.card{
+    position: fixed;
+    top:0;
+    left: 100%;
+    width: 500px;
+    background-color: #453E3B;
+    height: 100vh;
+    transition: 0.5s;
+}
+.active .card{
+    left: calc(100% - 500px);
+}
+.active .container{
+   transform: translateX(-200px);
+}
+.card h1{
+    color: orangered;
+    font-weight: 100;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.card .checkOut{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+.card .checkOut div{
+    background-color:   orangered;
+    border: solid;
+    border-color: white;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.listCart li{
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: #fff;
+    row-gap: 20px;
+}
+
+.listCart li div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listCart li img{
+    width: 60%;
+}
+.listCart li button{
+    color: white;
+    background-color: #453E3B;
+    border: none;
+    align-self: center;
+    cursor: pointer;
+}
+.listCart .count{
+    margin: 0 10px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
